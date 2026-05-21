@@ -1,12 +1,63 @@
-# Environments
+# ==============================================================================
+# SECRETS & ENVIRONMENT VARIABLES (CRITICAL SECURITY)
+# ==============================================================================
 .env
+.env.local
+.env.*
+*.env
+config/.env
+backend/.env
+
+# ==============================================================================
+# PYTHON / VIRTUAL ENVIRONMENTS
+# ==============================================================================
 venv/
+.venv/
+env/
+.env/
+ENV/
+pyvenv.cfg
+include/
+lib/
+share/
+pip-selfcheck.json
+
+# Python cache and compiled bytecode
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
-# Node / Frontend
-node_modules/
-dist/
-
-# Databases
+# ==============================================================================
+# DATABASES & LOCAL DATA (PROTECTS SQL DUMPS)
+# ==============================================================================
+*.sql
 *.sqlite3
+*.db
+# Extra protection if you export XAMPP database back-ups here:
+database_backups/
+dumps/
+
+# ==============================================================================
+# NODE / FRONTEND (DEPENDENCIES & BUILDS)
+# ==============================================================================
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.cache/
+.npm/
+
+# ==============================================================================
+# SYSTEM & IDE NOISE
+# ==============================================================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
